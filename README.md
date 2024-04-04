@@ -3,10 +3,10 @@ Powershell script to automate using wordlist with Hashcat with the option to dis
 
 # Parameters
 ## CaptureDirectory
-The locatoin where the handshake captures are located.
+The location where the handshake captures are located.
 
 ## DictionaryDirectory
-The locatoin where the dictionary/wodlist are located.
+The location where the dictionary/wodlist are located.
 
 ## HashCatDirectory
 The location where the hashcat.exe and releated files are located

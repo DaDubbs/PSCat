@@ -3,10 +3,10 @@
 Use multiple worldlist against multiple handshakes using Hashcat.
 
 .Parameter CaptureDirectory
-The locatoin where the handshake captures are located.
+The location where the handshake captures are located.
 
 .Parameter DictionaryDirectory
-The locatoin where the dictionary/wodlist are located.
+The location where the dictionary/wodlist are located.
 
 .Parameter HashCatDirectory
 The location where the hashcat.exe and releated files are located
