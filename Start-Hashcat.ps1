@@ -11,9 +11,6 @@ The location where the dictionary/wodlist are located.
 .Parameter HashCatDirectory
 The location where the hashcat.exe and releated files are located
 
-.Parameter HashTuneDirectory
-This is the location the tune file is for Hashcat. It is normally located in the same directory. Only use this option if there is an error message about the tune file.
-
 .Parameter ShowResults
 This will show the results for all of the captures that were cracked.
 
@@ -49,9 +46,6 @@ param(
     [string]$HashCatDirectory,
 
     [Parameter()]
-    [string]$HashTuneDirectory,
-
-    [Parameter()]
     [bool]$ShowResults = $true,
 
     [Parameter()]
@@ -61,7 +55,7 @@ param(
 function Show-Results($cap, $mode, $hash){
     $Results = New-Object psobject
     $hashcat = "$($hash)\hashcat.exe"
-    $Output = (cmd.exe /c $($hashcat) --show $($cap) -m 22000)|Out-String
+    $Output = (cmd.exe /c $($hashcat) --show $($cap) -m $mode)|Out-String
     if($Output -ne ""){
         $OutputSplit = $Output -split ":"
         $Results|Add-Member -MemberType NoteProperty -Name "SSID" -Value $OutputSplit[-2]
