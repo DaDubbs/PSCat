@@ -2,22 +2,24 @@
 Powershell script to automate using wordlist with Hashcat with the option to display the results of cracked hashes.
 
 # Parameters
-## CaptureDirectory
+The following are parameters within the script along with their usage. This can also be shown with get-help Start-Hashcat.ps1 within PowerShell.
+
+### CaptureDirectory
 The location where the handshake captures are located.
 
-## DictionaryDirectory
+### DictionaryDirectory
 The location where the dictionary/wodlist are located.
 
-## HashCatDirectory
+### HashCatDirectory
 The location where the hashcat.exe and releated files are located
 
-## HashTuneDirectory
+### HashTuneDirectory
 This is the location the tune file is for Hashcat. It is normally located in the same directory. Only use this option if there is an error message about the tune file.
 
-## ShowResults
-This will show the results for all of the captures that were cracked.
+### ShowResults
+This will show the results for all of the captures that were cracked. 
 
-## Mode
+### Mode
 The mode that Hashcat will run in.  For WPA, it will be 22000 or 22001.
 
 # Example
